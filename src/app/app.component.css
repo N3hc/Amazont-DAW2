@@ -1,58 +1,10 @@
-/* Estilos generales */
-.header {
-    display: grid;
-    grid-template-columns: 200px 1fr 1fr;
-    grid-template-rows: 60px;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
-    background-color: #1064A6;
-    padding: 10px;
-    box-sizing: border-box;
-}
 
-/* Logo */
-.div1 {
-    grid-area: 1 / 1 / 2 / 2;
-    display: flex;
-    align-items: center;
-}
-
-/* Barra de búsqueda */
-.div2 {
-    grid-area: 1 / 2 / 2 / 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    width: 100%; /* Asegura que div2 ocupe todo el espacio disponible dentro de la grid */
-}
-
-
-/* Estilo para el formulario */
-.form-control {
-    flex-grow: 1; /* Hace que el input ocupe todo el espacio disponible */
-    width: auto;  /* Asegura que el input no se restrinja por un width fijo */
-}
-.form-control.me-2 {
-    margin-right: 10px;  /* Agrega espacio entre el input y el botón */
-}
-
-/* El botón ocupa el espacio justo necesario */
 button.btn {
     padding: 6px 12px;
     background-color: #0247FE;
     color: white;
     border: none;
     white-space: nowrap;  /* Evita que el texto se rompa */
-}
-
-/* Información de cuenta, pedidos y carrito */
-.div3 {
-    grid-area: 1 / 3 / 2 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 15px;
 }
 
 .account, .process, .cart {
@@ -65,49 +17,8 @@ button.btn {
     position: relative;
 }
 
-.cart h5 {
-    position: absolute;
-    top: -10px;
-    left: 25px;
-    color: white;
-    font-size: 18px; /* Tamaño del número */
-    font-weight: bold;
-}
-
 /* Media Query para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
-    .header {
-        grid-template-columns: 1fr; /* Una sola columna */
-        grid-template-rows: auto auto auto; /* Varias filas */
-    }
-
-    .div1 {
-        justify-content: center;
-    }
-
-    .div2 {
-        grid-area: 2 / 1 / 3 / 2;
-        justify-content: center;
-        margin-top: 10px;
-        max-width: 80%; /* En pantallas más pequeñas, la barra de búsqueda no es tan grande */
-    }
-
-    .form-control {
-        width: 80%; /* El input ocupa el 80% del espacio */
-    }
-
-    .div2 button {
-        width: 20%; /* El botón ocupa el 20% del espacio */
-    }
-
-    .div3 {
-        grid-area: 3 / 1 / 4 / 2;
-        justify-content: center;
-        gap: 10px;
-        flex-direction: column;
-        text-align: center;
-    }
-
     .account, .process, .cart {
         font-size: 14px;
         margin: 5px 0;
@@ -116,33 +27,7 @@ button.btn {
 
 /* Media Query para pantallas más pequeñas (hasta 480px) */
 @media (max-width: 480px) {
-    .header {
-        grid-template-columns: 1fr;
-    }
-
-    .div1 img {
-        max-height: 30px; /* Ajustamos el tamaño del logo */
-    }
-
-    .form-control {
-        width: 100%; /* El input ocupa el 100% */
-    }
-
-    .div2 button {
-        width: 100%; /* El botón ocupa todo el ancho */
-    }
-
-    .div3 {
-        flex-direction: column;
-        gap: 5px;
-    }
-
     .account, .process, .cart {
         font-size: 12px;
-    }
-
-    .cart h5 {
-        font-size: 16px; /* Reducimos el tamaño del número en pantallas muy pequeñas */
-        left: 20px; /* Ajustamos la posición */
     }
 }
