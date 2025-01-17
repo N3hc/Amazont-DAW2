@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex justify-content-center align-items-center"
+        style="background-color: #EDF1FF; max-width: 1300px; width: 100%; height: 100%; box-shadow: 0px 0px 63px -21px rgba(0,0,0,0.75);">
+        <div class="col-md-4" style="height: 100vh; width: 100vh; ">
+            @for (category of categories.categoriesList; track $index) {
+            <div class="d-flex justify-content-center align-items-center" 
+                    style="-webkit-box-shadow: 0px 0px 24px 5px rgba(244,252,20,0.87);
+                    -moz-box-shadow: 0px 0px 24px 5px rgba(244,252,20,0.87);
+                    box-shadow: 0px 0px 24px 5px rgba(244,252,20,0.87); 
+                    height: 300px; width: 300px;
+                    border-radius: 10px;">
+                <img style="max-width: 250px; max-height: 250px;" src="{{category}}" alt="">
+            </div>
+
+            }
+        </div>
+    </div>
+</div>

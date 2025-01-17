@@ -1,5 +1,5 @@
 <div class="row align-items-center text-center" style="background-color: #1064A6; padding: 10px;">
-    <div class="col-md-3 d-flex ">
+    <div class="col-md-3 d-flex">
         <img src="assets/images/logo.png" alt="Logo" style="max-height: 40px;">
     </div>
     <div class="col-md-6">
@@ -23,3 +23,17 @@
         </div>
     </div>
 </div>
+
+<div class="row align-items-center text-center" style="background-color: #3D81B6; padding: -8px;">
+    @for (category of categories.categoriesList; track $index) {
+        <div class="col-md d-flex justify-content-center" style="padding-top: 8px;"><p class="text-center" style="color: white;">{{category}}</p></div>
+    }
+</div>
+<!--    
+    <div class="col-md d-flex justify-content-center" style="padding-top: 8px;"><p class="text-center">Pokemon TCG</p></div>
+    <div class="col-md d-flex justify-content-center" style="padding-top: 8px;"><p class="text-center">One piece Card Games</p></div>
+    <div class="col-md d-flex justify-content-center" style="padding-top: 8px;"><p class="text-center">Magic: The Gathering</p></div>
+    <div class="col-md d-flex justify-content-center" style="padding-top: 8px;"><p class="text-center">Yu Gi Oh!</p></div>
+-->
+        <app-startpage> </app-startpage>
+
